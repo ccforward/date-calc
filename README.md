@@ -19,7 +19,7 @@ npm test
 
 ## update
 
-@v1.0.1
+@v1.0.2
 
 1. update: method `now()`
 
@@ -96,8 +96,8 @@ d.afterMonth()
   `new DateCalc('20460118').CHN()` returns '2046年01月18日'
 
 [downloads-image]: https://img.shields.io/npm/dm/date-calc.svg
-[npm-url]: https://www.npmjs.com/package/
-[npm-image]: https://img.shields.io/npm/v/ddate-calcate-calc.svg
+[npm-url]: https://www.npmjs.com/package/date-calc
+[npm-image]: https://img.shields.io/npm/v/date-calc.svg
 
 [travis-url]: https://travis-ci.org/ccforward/date-calc
 [travis-image]: https://travis-ci.org/ccforward/date-calc.svg?branch=master
