@@ -19,7 +19,11 @@ npm test
 
 ## update
 
-@v1.0.2
+#### @v1.0.3
+
+fix the `new Date()` bug of Safari of macOS and iOS
+
+#### @v1.0.2
 
 1. update: method `now()`
 
