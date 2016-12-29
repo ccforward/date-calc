@@ -19,6 +19,17 @@ npm test
 
 ## update
 
+#### @v1.0.4
+add the `today` function 
+
+```js
+const DateCalc = require('date-calc')
+const d = new DateCalc()
+
+d.today() // returns today date
+
+```
+
 #### @v1.0.3
 
 fix the `new Date()` bug of Safari of macOS and iOS
