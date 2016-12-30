@@ -19,6 +19,9 @@ npm test
 
 ## update
 
+#### @v1.0.5
+fix bug of `monthEN()` function
+
 #### @v1.0.4
 add the `today` function 
 
