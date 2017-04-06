@@ -17,7 +17,7 @@ DateCalc.prototype = {
     constructor: DateCalc,
 
     time: function(timestamp){
-        var d = timestamp ? new Date(timestamp) : new Date();
+        var d = timestamp ? new Date(parseInt(timestamp, 10)) : new Date();
         var date = [d.getFullYear(), this._cover(d.getMonth()+1), this._cover(d.getDate())].join('');
         return date + ' ' + [this._cover(d.getHours()), this._cover(d.getMinutes()), this._cover(d.getSeconds())].join(':')
     },
