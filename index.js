@@ -16,6 +16,11 @@ function DateCalc(date, bef, aft){
 DateCalc.prototype = {
     constructor: DateCalc,
 
+    time: function(timestamp){
+        var d = timestamp ? new Date(timestamp) : new Date();
+        var date = [d.getFullYear(), this._cover(d.getMonth()+1), this._cover(d.getDate())].join('');
+        return date + ' ' + [d.getHours(), d.getMinutes(), d.getSeconds()].join(':')
+    },
     now: function(date){
         date && (this.date = [date.substr(0,4), '-', date.substr(4,2), '-', date.substr(-2)].join(''))
         var d = this.date ? new Date(this.date) : new Date();

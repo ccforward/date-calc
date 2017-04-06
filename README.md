@@ -20,6 +20,10 @@ npm test
 ## update
 
 #### @v1.0.6
+add the `time(timestamp)` function that returns full date
+
+
+#### @v1.0.6
 add the `beforeCN` and `afterCN` function that returns chinese format days
 
 #### @v1.0.5

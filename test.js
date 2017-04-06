@@ -4,9 +4,20 @@ var DateCalc = require('./index');
 var d = new DateCalc();
 var d1 = new DateCalc('20460818');
 
+function _cover(num) {
+    var n = parseInt(num, 10);
+    return n < 10 ? '0' + n : n;
+}
+
+test('d.time()', t => {
+    let date = new Date()
+    let time = [date.getFullYear(), _cover(date.getMonth()+1), _cover(date.getDate())].join('');
+    time = time + ' ' + [date.getHours(), date.getMinutes(), date.getSeconds()].join(':')
+    t.is(time, d.time(date.getTime()));
+});
 
 test('d.now()', t => {
-    let now = [new Date().getFullYear(), new Date().getMonth()+1, new Date().getDate()].join('')
+    let now = [new Date().getFullYear(), _cover(new Date().getMonth()+1), _cover(new Date().getDate())].join('')
     t.is(now, d.now());
 });
 
