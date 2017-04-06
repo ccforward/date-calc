@@ -12,7 +12,7 @@ function _cover(num) {
 test('d.time()', t => {
     let date = new Date()
     let time = [date.getFullYear(), _cover(date.getMonth()+1), _cover(date.getDate())].join('');
-    time = time + ' ' + [date.getHours(), date.getMinutes(), date.getSeconds()].join(':')
+    time = time + ' ' + [_cover(date.getHours()), _cover(date.getMinutes()), _cover(date.getSeconds())].join(':')
     t.is(time, d.time(date.getTime()));
 });
 
