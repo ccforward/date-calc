@@ -7,7 +7,7 @@ function DateCalc(date, bef, aft){
     }
     this.bef = bef || 0;
     this.aft = aft || 0;
-    this.weekDayArr = ['Sun','Mon', 'Tues', 'Wen', 'Thur', 'Fri', 'Sat'];
+    this.weekDayArr = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     this.weekDayCNArr = ['日','一', '二', '三', '四', '五', '六'];
     this.monthArr = ['00','01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
     this.monthENArr = ['','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -49,6 +49,18 @@ DateCalc.prototype = {
     monthEN: function(dtime){
         dtime = dtime ? dtime : this.now()
         return this.monthENArr[parseInt(dtime.substr(4,2))];    
+    },
+    year: function(){
+        var d = this.date ? new Date(this.date) : new Date();
+        return d.getFullYear().toString();
+    },
+    beforeYear: function() {
+        var y = this.year();
+        return (parseInt(y, 10) - 1).toString();
+    },
+    afterYear: function() {
+        var y = this.year();
+        return (parseInt(y, 10) + 1).toString();
     },
     beforeMonth: function(){
         var y = parseInt(this.month().substr(0,4), 10),
