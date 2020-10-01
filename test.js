@@ -80,6 +80,17 @@ test('monthTest2.afterMonth()', t => {
     t.is('204701', monthTest2.afterMonth());
 });
 
+let yearTest = new DateCalc('20460818');
+test('yearTest.year()', t => {
+    t.is('2046', yearTest.year());
+});
+test('yearTest.afterYear()', t => {
+    t.is('2047', yearTest.afterYear());
+});
+test('yearTest.beforeYear()', t => {
+    t.is('2045', yearTest.beforeYear());
+});
+
 
 // month English descripe
 test('month English descripe', t => {
